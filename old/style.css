@@ -1,0 +1,468 @@
+/** 
+  Autors: programmers Team of Mapaprzyjaznych. 
+  Oskar Owca, Róża Rudziks, Dawid Kleszczewski;
+
+  designers: Oskar Owca, Oskar Jażdż,
+
+  Whole righs of the code belongs to the Team of Mapaprzyjaznych.pl
+
+**/
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  color: black;
+  box-sizing: border-box;
+  text-transform: capitalize;
+}
+nav {
+  position: fixed;
+  width: 100%;
+  background: rgba(174, 39, 212, 0);
+  padding-bottom: 0.8rem;
+  z-index: 1;
+  transition: 0.2s;
+}
+
+.fixed {
+  background: rgb(101, 6, 165);;
+  border-bottom-left-radius: 2rem 15%;
+  box-shadow: 0 0 13px #8807a8, 0 0 16px #9d18be, 0 0 14px #000000;
+  border-bottom: 2px solid rgb(148, 9, 241);
+}
+
+/** background  który będzie się dostosowywał do wymiaru całej strony**/
+/**
+body{
+  background-image: url(https://images.pexels.com/photos/7846567/pexels-photo-7846567.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500);
+  background-repeat: no-repeat;
+  background-size:cover;
+  background-position:center;
+  background-attachment:scroll;
+
+}
+**/
+/**  background będzie przypięty i będzie podąrzał w nie zmieniony stanie ( ty akurat jest animacja to lepiej ją usunąć)
+body {
+  background-repeat: no-repeat;
+  background-size:cover;
+  background-position: center;
+  background-attachment: fixed;
+  overflow: hidden;
+  position:relative;
+  background-image: url(./pexels-sanket-barik-7846665.jpg);
+  animation: slide 10s infinite;
+}
+**/
+/** Animacja slidów background
+Trochę ramu bierze
+
+overflow: hidden;
+position:relative;
+background-image: url(./pexels-sanket-barik-7846665.jpg);
+background-size:cover;
+background-repeat: no-repeat;
+animation: slide 10s infinite;
+background-attachment: fixed;
+@keyframes slide {
+  0%{
+    background-image: url(./pexels-dmitriy-ganin-7789197.jpg);
+  }
+
+  33%{
+    background-image: url(./pexels-midhun-joseph-9356981.jpg);
+  }
+
+  67%{
+    background-image: url(./pexels-sanket-barik-7846563.jpg);
+  }
+}
+**/
+nav img {
+  margin-top: 1rem;
+  margin-left: 1.5rem;
+  height:4rem;
+  line-height: 60px;
+  transition: 0.3s;
+  border-radius: 10% ;
+}
+
+nav h1 span{
+  padding-left: 0.3rem;
+}
+nav ul {
+  list-style: none;
+  float: right;
+  margin-right: 40px;
+  position: relative;
+  user-select: none;
+}
+nav ul li {
+  display: inline-block;
+  text-decoration: none;
+  padding-left: 4px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 1rem;
+}
+
+nav ul li a {
+  font-size: 16pt;
+  text-decoration: none;
+  line-height: 60px;
+  padding: 2px 2px;
+  cursor: pointer;
+  color: #000000;
+  transition: 0.5s ease;
+}
+
+nav ul li a:hover{
+  color:#2a75ff;
+}
+
+/** 
+   Animacje (nie polecam tak napisanego, polecam użyć scss by zaoszczędzić czas)
+**/
+.a-1::after{
+  content:'';
+  width:0%;
+  background-color:#2a75ff;
+  height: 4px;
+  position: absolute;
+  bottom: 0%;
+  left: 0%;
+  border-radius: 10px;
+  transition: all 500ms ease;
+}
+
+
+.a-1:hover::after{
+width:15%;
+left: 0%;
+}
+
+.a-2::after{
+  content:'';
+  width:0%;
+  background-color:#2a75ff;
+  height: 4px;
+  position: absolute;
+  bottom: 0%;
+  left:10%;
+  border-radius: 10px;
+  transition: all 500ms ease;
+}
+.a-2:hover::after{
+  width:15%;
+  left: 13%;
+}
+
+.a-3::after{
+  content:'';
+  width:0%;
+  background-color:#2a75ff;
+  height: 4px;
+  position: absolute;
+  bottom: 0%;
+  left:25%;
+  border-radius: 10px;
+  transition: all 500ms ease;
+}
+.a-3:hover::after{
+  width:17%;
+  left:28%;
+}
+
+.a-4::after{
+  content:'';
+  width:0%;
+  background-color:#2a75ff;
+  height: 4px;
+  position: absolute;
+  bottom: 0%;
+  left:45%;
+  border-radius: 10px;
+  transition: all 500ms ease;
+}
+.a-4:hover::after{
+  width:18%;
+  left: 50%;
+}
+
+.a-5::after{
+  content:'';
+  width:0%;
+  background-color:#2a75ff;
+  height: 4px;
+  position: absolute;
+  bottom: 0%;
+  left:60%;
+  border-radius: 10px;
+  transition: all 500ms ease;
+}
+.a-5:hover::after{
+  width:25%;
+  left:70%;
+}
+
+.down-2 {
+  color: #360636;
+  padding-left: 2px;
+}
+
+.special {
+  margin-right: 1rem;
+}
+
+/**
+.special a {
+  padding: 4px 4px 4px 4px;
+  border: 2px solid #d42aff;
+  box-shadow: 0 0 3px #d42aff, 0 0 6px #d32afe;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: 0.6s ease;
+  transition-property: background;
+}
+**/
+
+/**
+.special a:hover {
+  background: #d42afe4f;
+  color: #360636;
+}
+**/
+
+
+
+/** zmiany dokonywane po zaznaczeniu checkobox
+#icon:checked ~ nav {
+  border-bottom-left-radius: 3rem 15%;
+}
+
+#icon:checked ~ nav ul {
+  display: contents;
+  height: 80%;
+  margin-right: auto;
+  margin-left: auto;
+  padding-top: 20%;
+  justify-content: center;
+  text-align: center;
+}
+
+#icon:checked ~ nav ul li {
+  width: 100%;
+  display: block;
+}
+#icon:checked ~ nav ul li a {
+  line-height: 50px;
+}
+**/
+
+#btn {
+  color: #310555;
+  display: none;
+  float: right;
+  margin-top: 2rem;
+  margin-right: 2.5rem;
+  font-size: 24pt;
+}
+@media (max-width: 880px) {
+  nav img {
+    padding-left: 1rem;
+    height: 4rem;
+    line-height: 50px;
+  }
+
+  #icon {
+    display: none;
+  }
+  #btn {
+    display: none;
+  }
+}
+@media (max-width: 850px) {
+  nav {
+    border-bottom-left-radius: 3rem 15%;
+    box-shadow: 0 0 12px #7026ad, 0 0 15px #d32afe, 0 0 14px #000000;
+  }
+
+  .mobNav{
+    display:contents;
+    transition: all 0.8s ease ;
+  }
+  
+  nav ul {
+    display: none;
+    height: 80%;
+    margin-right: auto;
+    margin-left: auto;
+    padding-top: 20%;
+    justify-content: center;
+    text-align: center;
+  }
+  
+   nav ul li {
+    width: 100%;
+    display: block;
+  }
+
+  nav ul li a {
+    line-height: 50px;
+  }
+
+ 
+  nav img {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  #btn {
+    display: block;
+  }
+  .a-1::after{
+    content:'';
+    width:0%;
+    background-color:#2a75ff;
+    height: 4px;
+    position: absolute;
+    bottom:65%;
+    left:0%;
+    border-radius: 10px;
+    transition: all 500ms ease;
+  }
+  
+  
+  .a-1:hover::after{
+  width:100%;
+  left:0%;
+  }
+  
+  .a-2::after{
+    content:'';
+    width:0%;
+    background-color:#2a75ff;
+    height: 4px;
+    position: absolute;
+    left:0%;
+    bottom:50% ;
+    border-radius: 10px;
+    transition: all 500ms ease;
+  }
+  .a-2:hover::after{
+    width:100%;
+    left:0%;
+  }
+  
+  .a-3::after{
+    content:'';
+    width:0%;
+    background-color:#2a75ff;
+    height: 4px;
+    position: absolute;
+    bottom: 35%;
+    left:0%;
+    border-radius: 10px;
+    transition: all 500ms ease;
+  }
+  .a-3:hover::after{
+    width:100%;
+    left:0%;
+  }
+  
+  .a-4::after{
+    content:'';
+    width:0%;
+    background-color: #2a75ff;
+    height: 4px;
+    position: absolute;
+    bottom: 20%;
+    left:0%;
+    border-radius: 10px;
+    transition: all 500ms ease;
+  }
+  .a-4:hover::after{
+    width:100%;
+    left:0%;
+  }
+  
+  .a-5::after{
+    content:'';
+    width:0%;
+    background-color:#2a75ff;
+    height: 4px;
+    position: absolute;
+    bottom: 5%;
+    left:0%;
+    border-radius: 10px;
+    transition: all 500ms ease;
+  }
+  .a-5:hover::after{
+    width:100%;
+    left:0%;
+  }
+
+}
+
+#icon {
+  display: none;
+}
+
+
+.container{
+  position: absolute;
+  padding-top:7rem;
+  width: 100%;  
+  background-image: url(https://images.pexels.com/photos/7846567/pexels-photo-7846567.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500);
+  background-repeat: no-repeat;
+  background-size:cover;
+  background-position:center;
+
+}
+.container div{
+  margin-top: 5rem;
+  display: block;
+  justify-content: center;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.container div h1 {
+  text-align: center;
+  font-size: 2.5pc;
+}
+
+.container div p{
+  font-size: 17pt;
+}
+
+#in{
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  width: 100%;
+  outline:none;
+  background: #7026ad4b;
+  border: 1px solid #7026ad;
+  border-radius: 15px;
+  height:4rem;
+  box-shadow: 0 0 8px #d42aff, 0 0 12px #d32afe, 0 0 13px #000000;
+  text-align: center;
+  font-size: 21pt;
+  color: #390147;
+}
+
+#in:placeholder-shown{
+  text-align: center;
+  font-size: 21pt;
+}
+
+#in::placeholder{
+  color: #390147;
+  text-align: center;
+}
+
+.space{
+  padding-top:4.2rem;
+}
